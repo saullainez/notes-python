@@ -4,7 +4,7 @@
  # Funcionalidad
  * Inicio de sesión y registro.
  * Una vez que hayas iniciado sesión, podrás:
- * Crear, leer y actualizar notas.
+ * Crear, leer y borrar notas.
 
  ------------------------------------------------------------
  # notes-python
@@ -13,5 +13,5 @@
  # Functionality
  * Registration and login.
  * Once you are logged in, you can:
- * Create, read and update notes
+ * Create, read and deletes notes
 
