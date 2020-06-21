@@ -9,6 +9,12 @@ Acciones disponibles:
 action = input("¿Qué deseas hacer?")
 
 if action == "1":
-    print("Perfecto, vamos a registrarte en el sistema")
+    print("\nPerfecto, vamos a registrarte en el sistema")
+    name = input("¿Cuál es tu nombre?")
+    lastname = input("¿Cuáles son tus apellidos?")
+    email = input("Introduce tu email")
+    password = input("Introduce tu contraseña")
 elif action == "2":
-    print("Bien, identifícate en el sistema")
+    print("\nBien, identifícate en el sistema")
+    email = input("Introduce tu email")
+    password = input("Introduce tu contraseña")
