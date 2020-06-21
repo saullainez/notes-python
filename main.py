@@ -9,7 +9,7 @@ Acciones disponibles:
 
 do = actions.Actions()
 
-action = input("¿Qué deseas hacer?")
+action = input("¿Qué deseas hacer? ")
 
 if action == "1":
     do.register()
