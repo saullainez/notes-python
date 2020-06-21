@@ -1,3 +1,4 @@
+from users import actions
 #Menú principal
 print("""
 Selecciona el número de la acción que desees realizar.
@@ -6,15 +7,11 @@ Acciones disponibles:
     -2 Login.
 """)
 
+do = actions.Actions()
+
 action = input("¿Qué deseas hacer?")
 
 if action == "1":
-    print("\nPerfecto, vamos a registrarte en el sistema")
-    name = input("¿Cuál es tu nombre?")
-    lastname = input("¿Cuáles son tus apellidos?")
-    email = input("Introduce tu email")
-    password = input("Introduce tu contraseña")
+    do.register()
 elif action == "2":
-    print("\nBien, identifícate en el sistema")
-    email = input("Introduce tu email")
-    password = input("Introduce tu contraseña")
+    do.login()
