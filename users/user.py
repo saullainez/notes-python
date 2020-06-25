@@ -1,16 +1,12 @@
-import mysql.connector
 import datetime
 import hashlib
+import users.connection as con
 
-database = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="",
-    database="notes_py",
-    port=3306
-)
+connect = con.connect()
+database = connect[0]
+cursor = connect[1]
 
-cursor = database.cursor(buffered=True)
+
 class User:
 
     def __init__(self, name, lastname, email, password):
