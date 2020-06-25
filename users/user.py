@@ -1,5 +1,6 @@
 import mysql.connector
 import datetime
+import hashlib
 
 database = mysql.connector.connect(
     host="localhost",
@@ -20,8 +21,13 @@ class User:
     
     def register(self):
         created_at = datetime.datetime.now()
+
+        #Cifrar contraseña
+        cifrado = hashlib.sha256()
+        cifrado.update(self.password.encode('utf8'))
+
         sql = "INSERT INTO users VALUES(null, %s, %s, %s, %s, %s)"
-        user = (self.name, self.lastname, self.email, self.password, created_at)
+        user = (self.name, self.lastname, self.email, cifrado.hexdigest(), created_at)
 
         try:
             cursor.execute(sql, user)

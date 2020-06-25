@@ -9,6 +9,8 @@
  # Lo que aprendí
  * Conectar Python con MySQL.
  * Crear y usar modelos, paquetes y clases en Python.
+ * Implementar funcionalidad de registro e inicio de sesión con Python y MySQL.
+ * Implementar funcionalidad para leer, crear, actualizar y eliminar registros con Python y MySQL.
 
  ------------------------------------------------------------
  # notes-python
@@ -22,4 +24,6 @@
  # What I Learned
   * Connect Python with MySQL.
   * Create and use models, packages and classes in Python.
+  * Implement register and login functionality with Python and MySQL.
+  * Implement functionality to read, create, update and delete records with Python and MySQL.
 
