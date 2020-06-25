@@ -23,10 +23,15 @@ class User:
         sql = "INSERT INTO users VALUES(null, %s, %s, %s, %s, %s)"
         user = (self.name, self.lastname, self.email, self.password, created_at)
 
-        cursor.execute(sql, user)
-        database.commit()
+        try:
+            cursor.execute(sql, user)
+            database.commit()
+            result = [cursor.rowcount, self]
+        except:
+            result = [0, self]
 
-        return[cursor.rowcount, self]
+        return result
+
 
     def login(self):
         return self
