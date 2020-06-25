@@ -1,4 +1,5 @@
 import users.user as model
+import notes.actions
 
 class Actions:
     def register(self):
@@ -46,8 +47,10 @@ class Actions:
 
         action = input("¿Qué deseas hacer?: ")
 
+        do = notes.actions.Actions()
+
         if action == "crear":
-            print("Crear")
+            do.create(user)
             self.nextActions(user)
         elif action == "mostrar":
             print("Mostrar")
