@@ -53,7 +53,7 @@ class Actions:
             do.create(user)
             self.nextActions(user)
         elif action == "mostrar":
-            print("Mostrar")
+            do.show(user)
             self.nextActions(user)
         elif action == "eliminar":
             print("El")

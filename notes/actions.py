@@ -15,3 +15,12 @@ class Actions:
             print(f"\nPerfecto, has guardado la nota {note.title}")
         else:
             print(f"\nNo se ha podido guardar la nota")
+    
+    def show(self, user):
+        print("\nEstas son tus notas: ")
+
+        note = model.Note(user[0])
+        notes = note.show()
+
+        print(notes)
+
