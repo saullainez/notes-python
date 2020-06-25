@@ -28,3 +28,14 @@ class Actions:
             print(note[3])
             print("\n****************************************************")
 
+    def delete(self, user):
+        print("\nVamos a borrar notas")
+        title = input("\nIntroduce el título de la nota a borrar: ")
+
+        note = model.Note(user[0], title)
+        delete = note.delete()
+
+        if delete[0] >= 1:
+            print(f"Se ha borrado la nota: {note.title}")
+        else:
+            print("No se ha podido borrar la nota")

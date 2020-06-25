@@ -27,3 +27,11 @@ class Note:
         result = cursor.fetchall()
 
         return result
+
+    def delete(self):
+        sql = f"DELETE FROM notes WHERE user_id = {self.user_id} AND title LIKE '%{self.title}%' "
+
+        cursor.execute(sql)
+        database.commit()
+
+        return [cursor.rowcount, self]

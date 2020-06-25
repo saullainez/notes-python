@@ -56,7 +56,7 @@ class Actions:
             do.show(user)
             self.nextActions(user)
         elif action == "eliminar":
-            print("El")
+            do.delete(user)
             self.nextActions(user)
         elif action == "salir":
             print(f"Hasta pronto, {user[1]}")
