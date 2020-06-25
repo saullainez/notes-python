@@ -36,4 +36,25 @@ class Actions:
             print(f"Login incorrecto")
     
     def nextActions(self, user):
-        return none
+        print("""
+        Acciones disponibles:
+        -1 Crear notas (crear)
+        -2 Mostrar tus notas (mostrar)
+        -3 Eliminar nota (eliminar)
+        -4 Salir (salir)
+        """)
+
+        action = input("¿Qué deseas hacer?: ")
+
+        if action == "crear":
+            print("Crear")
+            self.nextActions(user)
+        elif action == "mostrar":
+            print("Mostrar")
+            self.nextActions(user)
+        elif action == "eliminar":
+            print("El")
+            self.nextActions(user)
+        elif action == "salir":
+            print(f"Hasta pronto, {user[1]}")
+            exit()
