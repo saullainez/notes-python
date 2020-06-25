@@ -22,5 +22,9 @@ class Actions:
         note = model.Note(user[0])
         notes = note.show()
 
-        print(notes)
+        for note in notes:
+            print("\n****************************************************")
+            print(note[2])
+            print(note[3])
+            print("\n****************************************************")
 
